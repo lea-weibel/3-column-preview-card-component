@@ -1,0 +1,135 @@
+/* MAIN CONTAINER */
+body {
+  margin: 0;
+  background: hsl(0, 0%, 95%);:
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(23, 1fr);
+  grid-template-rows: 100px repeat(5, 1fr) 100px;
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+/* CARDS SECTION */
+.cards {
+  grid-column: 5 / -5;
+  grid-row: 2 / span 5;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 10px 0 0 10px;
+  padding: 16%;
+}
+
+.suvs {
+   background-color: hsl(184, 100%, 22%);
+   padding: 16%;
+}
+
+.luxury {
+   background-color: hsl(179, 100%, 13%);
+   border-radius: 0 10px 10px 0;
+   padding: 16%;
+}
+
+/* BUTTONS  */
+button {
+  margin-top: 35%;
+  padding: 6% 15%;
+  border-radius: 50px;
+  font-size: 15px;
+}
+
+.btn-sedans {
+  border: 2px solid hsl(31, 77%, 52%);
+  color: hsl(31, 77%, 52%);
+}
+
+.btn-sedans:hover {
+  border: 2px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
+  background-color: hsl(31, 77%, 52%);
+}
+
+.btn-suvs {
+  border: 2px solid hsl(184, 100%, 22%);
+  color: hsl(184, 100%, 22%);
+}
+
+.btn-suvs:hover {
+  border: 2px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
+  background-color: hsl(184, 100%, 22%);
+}
+
+.btn-luxury {
+  border: 2px solid hsl(179, 100%, 13%);
+  color: hsl(179, 100%, 13%);
+}
+
+.btn-luxury:hover {
+  border: 2px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
+  background-color: hsl(179, 100%, 13%);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 919px) {
+  .sedans {
+    border-radius: 10px 0 0 0;
+  }
+
+  .suvs {
+    border-radius: 0 10px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 10px 10px;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 613px) {
+  .sedans {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .suvs {
+    border-radius: 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+
+
+/* FOOTER SECTION */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  grid-column: 1 / -1;
+  grid-row: 7;
+  align-self: end;
+  padding: 2%;
+  color: #2F4F4F;
+}
+.attribution a { color: hsl(184, 100%, 22%); }
+
+.attribution span {
+  color: hsl(31, 77%, 52%);
+}
